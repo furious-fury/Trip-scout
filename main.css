@@ -1,0 +1,666 @@
+:root {
+  --green: #2fae61;
+  --blue: #3faad8;
+  --orange: #ff9c3e;
+  --dark-purple: #813bd9;
+  --light-purple: #f7f1fd;
+  --purple: #a268e1;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+a,
+ul {
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.covid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 6vh;
+  background-color: var(--light-purple);
+}
+
+.covid-container p {
+  margin-left: 7.7rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  margin: 0 auto;
+  width: 90%;
+  height: 14vh;
+  background-color: #fff;
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-family: "Lilita One", cursive;
+}
+
+.menu {
+  width: 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu li a {
+  position: relative;
+  font-weight: 700;
+}
+
+.user-panel {
+  width: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-panel p {
+  font-weight: 700;
+}
+
+.user-panel p:hover {
+  color: var(--dark-purple);
+}
+
+.likes::before {
+  font-family: "Font Awesome 5 Free";
+  margin-right: 0.5rem;
+  font-weight: 400;
+  content: "\f004";
+}
+
+.notif::before {
+  font-family: "Font Awesome 5 Free";
+  margin-right: 0.5rem;
+  font-weight: 400;
+  content: "\f0f3";
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--dark-purple);
+}
+
+.hover-2:after {
+  content: "";
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0.3rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  background-color: var(--dark-purple);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+
+.hover-2:hover:after {
+  -webkit-transform: scaleX(1.1);
+          transform: scaleX(1.1);
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  height: 70vh;
+  margin: auto;
+  background-color: var(--light-purple);
+}
+
+.main-container img {
+  margin: 5rem;
+  width: 40rem;
+  z-index: 0;
+}
+
+.purple {
+  background-color: var(--purple);
+  border: 0.5rem solid var(--purple);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.purple:hover {
+  background-color: #000;
+  border: 0.5rem solid #000;
+}
+
+.cta-container {
+  margin-left: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70rem;
+  height: 35rem;
+}
+
+.cta-container a {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  width: 15rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.cta-container p {
+  width: 50rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  line-height: 3rem;
+}
+
+.cta-container h1 {
+  font-family: "Lilita One", cursive;
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+.offers-container {
+  position: absolute;
+  padding: 0 5rem;
+  bottom: 1rem;
+  left: 35rem;
+  width: 70rem;
+  height: 12rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0rem 0.2rem 0.5rem rgba(66, 66, 66, 0.158);
+          box-shadow: 0rem 0.2rem 0.5rem rgba(66, 66, 66, 0.158);
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offers-container i {
+  width: 10rem;
+  font-size: 5rem;
+  text-align: center;
+  margin-top: -2rem;
+  color: var(--dark-purple);
+}
+
+.offers-container i::after {
+  color: #000;
+  display: block;
+  width: 10rem;
+  position: absolute;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-family: "Lato", sans-serif;
+}
+
+.fa-hotel::after {
+  content: "Hotels";
+}
+
+.fa-utensils::after {
+  content: "Restaurants";
+}
+
+.fa-ticket-alt::after {
+  content: "Things to do";
+}
+
+.fa-house-user::after {
+  content: "Rentals";
+}
+
+.how-it-works {
+  height: 100vh;
+  background-image: url(./img/bg-2.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+}
+
+.bigpad {
+  height: 18rem;
+}
+
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: transparent;
+}
+
+.header h1 {
+  font-size: 4rem;
+  font-family: "Lilita One", cursive;
+  position: relative;
+}
+
+.header h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.5rem;
+  height: 0.5rem;
+  width: 100%;
+  background-color: var(--dark-purple);
+}
+
+.works-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.works-container {
+  width: 30%;
+  height: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: outline 0.2s ease-in;
+  transition: outline 0.2s ease-in;
+  padding: 5rem;
+  outline: 0.5rem solid var(--dark-purple);
+  background-color: var(--light-purple);
+  border-radius: 1rem;
+}
+
+.works-container h3 {
+  font-size: 2.5rem;
+  color: #000;
+  font-family: "Lilita One", cursive;
+}
+
+.works-container p {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.works-container:hover {
+  cursor: pointer;
+  outline: 1.1rem solid var(--dark-purple);
+}
+
+.works-img {
+  margin: auto;
+  width: 70%;
+  overflow: hidden;
+}
+
+.destinations {
+  height: 100vh;
+}
+
+.card-container {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-img {
+  position: relative;
+  width: 35rem;
+  height: 23rem;
+  overflow: hidden;
+}
+
+.card-img img {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.card-img img:hover {
+  -webkit-transform: scale(1.05) rotate(0.02deg);
+          transform: scale(1.05) rotate(0.02deg);
+}
+
+.like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+.like i {
+  font-size: 1.5rem;
+  -webkit-filter: drop-shadow(0rem 0.2rem 0.5rem rgba(66, 66, 66, 0.158));
+          filter: drop-shadow(0rem 0.2rem 0.5rem rgba(66, 66, 66, 0.158));
+}
+
+.card-text {
+  margin-top: 2rem;
+  height: 3rem;
+}
+
+.card-text h3 {
+  font-size: 2rem;
+  font-family: "Lilita One", cursive;
+}
+
+.why-us {
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+  background-image: url(./img/bg.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+}
+
+.why-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35rem;
+  width: 90%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.why-container img {
+  margin: 5rem;
+  width: 40rem;
+}
+
+.why-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 20rem;
+  width: 80rem;
+  padding: 5rem;
+}
+
+.why-text p {
+  width: 50rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+
+.why-btn {
+  margin-top: 4.5rem;
+  height: 50rem;
+}
+
+.why-btn a:last-child {
+  margin-left: 5rem;
+}
+
+.why-btn a {
+  font-size: 1.5rem;
+}
+
+.transparent {
+  color: var(--purple);
+  background-color: transparent;
+  border: 0.3rem solid var(--purple);
+}
+
+.transparent:hover {
+  color: white;
+  background-color: var(--purple);
+}
+
+.why-reasons {
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  height: 18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reasons-container {
+  height: 18rem;
+  width: 23%;
+  border-radius: 1.5rem;
+  border: 0.5rem solid var(--purple);
+  padding: 1rem 2rem;
+}
+
+.reasons-container h3 {
+  font-size: 1.8rem;
+  color: #000;
+  font-family: "Lilita One", cursive;
+}
+
+.reasons-container p {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  margin-top: 3rem;
+  font-weight: 700;
+}
+
+.ham {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  top: 6rem;
+  right: 2rem;
+  width: 36px;
+  height: 3.6rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+  background-size: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .covid-container {
+    height: 5rem;
+  }
+  .ham {
+    display: block;
+  }
+  .nav-container {
+    background-color: var(--dark-purple);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+    width: 60%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+  .logo {
+    margin-top: 6rem;
+    z-index: 10;
+  }
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    z-index: 10;
+  }
+}
+/*# sourceMappingURL=main.css.map */
