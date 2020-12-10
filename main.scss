@@ -1,7 +1,6 @@
 :root {
   --green: #2fae61;
   --blue: #3faad8;
-  --orange: #ff9c3e;
   --dark-purple: #813bd9;
   --light-purple: #f7f1fd;
   --purple: #a268e1;
@@ -11,6 +10,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -23,6 +23,7 @@ html {
 body {
   font-family: "Lato", sans-serif;
   backface-visibility: hidden;
+  padding-top: 100rem;
 }
 
 body,
@@ -56,6 +57,38 @@ img {
   max-width: 100%;
   height: auto;
 }
+button,
+input,
+select {
+  -webkit-appearance: none;
+  outline: none;
+  font-family: "Karla", sans-serif;
+}
+
+button,
+.btn,
+select {
+  cursor: pointer;
+}
+.btn,
+button,
+.actionbg,
+input {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+}
+
+.btn:hover,
+button:hover {
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+}
 .main {
   height: 100vh;
   width: 100%;
@@ -73,7 +106,6 @@ img {
     letter-spacing: 0.1rem;
   }
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -81,7 +113,7 @@ img {
   padding: 0 1rem;
   margin: 0 auto;
   width: 90%;
-  height: 14vh;
+  height: 12vh;
   background-color: #fff;
   font-size: 1.5rem;
 }
@@ -260,6 +292,7 @@ img {
   height: 18rem;
 }
 .header {
+  background-color: #2fae61;
   position: relative;
   display: flex;
   justify-content: center;
@@ -330,6 +363,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 8rem;
 }
 .card-img {
   position: relative;
@@ -377,13 +411,15 @@ img {
   object-fit: cover;
   background-position: center;
 }
+.mb {
+  margin-bottom: 5rem;
+}
 .why-container {
   display: flex;
-  height: 35rem;
+  height: 30rem;
   width: 90%;
   margin: auto;
   justify-content: space-between;
-  align-items: center;
   & img {
     margin: 5rem;
     width: 40rem;
@@ -401,7 +437,7 @@ img {
     font-size: 1.5rem;
     font-weight: 700;
     margin-top: 1rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
   }
 }
 .why-btn {
@@ -446,49 +482,177 @@ img {
   & p {
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     font-weight: 700;
   }
 }
-.ham {
-  display: none;
-  position: absolute;
-  z-index: 1000;
-  top: 6rem;
-  right: 2rem;
-  width: 36px;
-  height: 3.6rem;
+.contact {
+  height: 100vh;
+  width: 90%;
+  margin: auto;
+}
+
+.wrapper {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    max-width: 1140px;
+  }
+}
+.align-start {
+  align-self: flex-start;
+  padding: 2em;
+}
+
+.w3l-workinghny-form {
+  position: relative;
+  z-index: 0;
+  padding: 2em 0px;
+  display: grid;
+  align-items: center;
+  height: 100vh;
+}
+.workinghny-block-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-gap: 70px;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.login-form-content {
+  padding: 2em 0em;
+  height: 100%;
+  width: 40rem;
+}
+.one-frm label {
+  font-style: normal;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: #343a40;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+  font-weight: 700;
+}
+input {
+  background: transparent;
   border: none;
-  cursor: pointer;
-  background-color: transparent;
-  background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
-  background-size: 100%;
+  border: 0.3rem solid #f3f3f38e;
+  color: #999;
+  background: transparent;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #f3f3f38e;
 }
-@media screen and (max-width: 1024px) {
-  .covid-container {
-    height: 5rem;
-  }
-  .ham {
-    display: block;
-  }
-  .nav-container {
-    background-color: var(--dark-purple);
-    flex-direction: column;
-    height: 100vh;
-    width: 60%;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-  }
-  .logo {
-    margin-top: 6rem;
-    z-index: 10;
-  }
-  .menu {
-    flex-direction: column;
-    justify-content: space-evenly;
-    z-index: 10;
+input:focus {
+  background: transparent;
+  border: 0.3rem solid var(--dark-purple);
+  background-color: #d4d4d48e;
+}
+
+.btn-style {
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  background: var(--dark-purple);
+  border: none;
+  height: 55px;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  &:hover {
+    background: var(--dark-purple);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
   }
 }
+::-webkit-input-placeholder {
+  color: #777;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: inherit;
+}
+@media (max-width: 992px) {
+  .workinghny-block-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    width: 100%;
+  }
+  .login-form-content {
+    padding: 0em 0em 2em 0;
+  }
+  .workinghny-left-img {
+    order: 2;
+  }
+
+  .logo a.brand-logo {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .w3l-workinghny-form {
+    height: auto;
+  }
+}
+
+@media (max-width: 667px) {
+  .align-end {
+    padding: 0em;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a.brand-logo {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 415px) {
+  .copyright {
+    margin-top: 30px;
+  }
+}
+
+/*-- //responsive design --*/
+/*-- //form styling --*/
